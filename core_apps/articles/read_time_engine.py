@@ -20,7 +20,7 @@ class ArticleReadTimeEngine:
         reading_time = total_word_count / word_per_minute * 60  # in seconds
 
         if article.banner_image:
-            reading += seconds_per_image / 60
+            reading_time += seconds_per_image / 60
 
         tag_count = article.tags.count()
         reading_time += (tag_count * seconds_per_tag) / 60  # in minutes
